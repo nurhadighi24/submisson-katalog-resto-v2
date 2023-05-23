@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  min-height: 100vh;
+}
+
+button,
+a:focus {
+  outline: 4px dashed orange;
+}
+
+.hero {
+  width: 100%
+}
+
+.hero .jumbotron {
+  width: 100%;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+}
+
+.hero .hero-content {
+  margin: auto;
+  font-size: 50px;
+  color: #577d86;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.app-bar {
+  padding: 8px 16px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+ 
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+ 
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+}
+ 
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+ 
+.app-bar .app-bar__brand h1 {
+  color: #b9eddd;
+  text-transform: uppercase;
+  font-size: 22px;
+  user-select: none;
+}
+ 
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: white;
+  overflow: hidden;
+}
+ 
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+ 
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 8px;
+  margin-bottom: 5px;
+  width: 100%;
+  min-width: 44px;
+  min-height: 44px;
+}
+ 
+/*
+  Main Content
+*/
+ 
+main {
+  padding: 32px;
+  flex: 1;
+}
+ 
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+ 
+.content .content__heading {
+  font-weight: normal;
+}
+ 
+ 
+/*
+  Restaurants
+*/
+ 
+.restaurants {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+ 
+ 
+/*
+  Restaurant Item
+*/
+ 
+.restaurant-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+ 
+.restaurant-item__header {
+  position: relative;
+}
+ 
+.restaurant-item .restaurant-item__header .restaurant-item__header__poster {
+  width: 100%;
+}
+ 
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating {
+  position: absolute;
+  padding: 8px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: black;
+  color: white;
+}
+ 
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating .restaurant-item__header__rating__score {
+  margin-left: 10px;
+}
+ 
+.restaurant-item .restaurant-item__content {
+  padding: 16px;
+}
+ 
+.restaurant-item .restaurant-item__content h3 {
+  margin: 0 0 10px 0;
+}
+ 
+.restaurant-item .restaurant-item__content h3 a {
+  color: #577D86;
+  text-decoration: none;
+  min-width: 44px;
+  min-height: 44px;
+}
+ 
+.restaurant-item .restaurant-item__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+ 
+ 
+/*
+  Restaurant
+*/
+ 
+.restaurant {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+ 
+.restaurant .restaurant__poster {
+  width: 100%;
+  max-width: 400px;
+}
+ 
+.restaurant .restaurant__info h4 {
+  margin: 8px 0;
+}
+ 
+ /*
+  Like
+*/
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+ 
+/*
+  Footer
+*/
+ 
+footer {
+  padding: 16px;
+}
+ 
+footer p {
+  text-align: center;
+  color: #aaaaaa;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+ 
+.skip-link:focus {
+   top: 0;
+}
